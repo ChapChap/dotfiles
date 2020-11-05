@@ -14,3 +14,7 @@ alias gdf="git difftool"
 
 alias cat="bat"
 alias k="kubectl"
+
+alias ls='ls -Gh'
+alias ll='ls -lGh'
+alias grep='grep --colour'

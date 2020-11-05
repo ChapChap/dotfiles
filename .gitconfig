@@ -1,19 +1,18 @@
-[core]
-    editor = nvim
 [user]
-    email = swann.castel@hotmail.fr
-    name = Swann Castel
-[difftool]
-    prompt = true
-[diff]
-    tool = nvimdiff
-[difftool "nvimdiff"]
-    cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
-[mergetool]
-    prompt = true
+	name = Chap
+	email = antoine.chapusot@gmail.com
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[filter "hawser"]
+	clean = git hawser clean %f
 [merge]
-    tool = nvimdiff
-[mergetool "nvimdiff"]
-    cmd = nvim -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
-[pull]
-    rebase = true
+	tool = meld
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[init]
+	templateDir = /Users/antoinechapusot/git/passculture-infra/.git-template
