@@ -26,12 +26,13 @@ println() {
 print_header() {
     echo $BOLD
     cat <<-'EOF'
-
-    ____                           _           _       _    __ _ _
-   / ___|_      ____ _ _ __  _ __ ( )___    __| | ___ | |_ / _(_) | ___  ___
-   \___ \ \ /\ / / _` | '_ \| '_ \|// __|  / _` |/ _ \| __| |_| | |/ _ \/ __|
-    ___) \ V  V / (_| | | | | | | | \__ \ | (_| | (_) | |_|  _| | |  __/\__ \
-   |____/ \_/\_/ \__,_|_| |_|_| |_| |___/  \__,_|\___/ \__|_| |_|_|\___||___/
+   ____  _                   _           _         _     __  _  _
+  / ___|| |__    __ _  _ __ ( )___    __| |  ___  | |_  / _|(_)| |  ___  ___
+ | |    | '_ \  / _` || '_ \|// __|  / _` | / _ \ | __|| |_ | || | / _ \/ __|
+ | |___ | | | || (_| || |_) | \__ \ | (_| || (_) || |_ |  _|| || ||  __/\__ \
+  \____||_| |_| \__,_|| .__/  |___/  \__,_| \___/  \__||_|  |_||_| \___||___/
+                      |_|
+Inspired by Swanny's
 
 EOF
     echo $RESET
@@ -40,7 +41,7 @@ EOF
 install_dotfiles() {
     if [ ! -d ~/.dotfiles ]; then
         println "${GREEN}\nCloning Dotfiles${RESET}"
-        git clone https://github.com/swanncastel/dotfiles.git ~/.dotfiles || exit 1
+        git clone https://github.com/ChapChap/dotfiles.git ~/.dotfiles || exit 1
     fi
 }
 
@@ -148,11 +149,11 @@ main() {
     install_tmux_plugin_manager
     install_plug_vim
     change_shell
-    install_rust_toolchain
-    install_nvm
-    install_deno
+    # install_rust_toolchain
+    # install_nvm
+    # install_deno
 
-    println "${GREEN}\nInstallation completed, you might need to log out for the chsh to take effect 🚀🔥${RED}❤️${RESET}"
+    println "${GREEN}\nInstallation completed, you might need to exec ${SHELL} for the chsh to take effect 🚀🔥${RED}❤️${RESET}"
 }
 
 main

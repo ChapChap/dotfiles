@@ -27,11 +27,11 @@ sudo dnf install curl git neovim zsh tmux ack alacritty stow fd-find htop
 
 ```bash
 brew cask install alacritty
-brew install neovim ack zsh tmux stow alacritty fd htop
+brew install neovim ack zsh tmux stow alacritty fd htop bat
 ```
 
 ## Installation
 
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/swanncastel/dotfiles/master/install.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ChapChap/dotfiles/master/install.sh)"
 ```

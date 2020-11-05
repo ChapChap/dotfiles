@@ -11,3 +11,6 @@ alias vim="nvim"
 
 # Missing from zsh git plugin
 alias gdf="git difftool"
+
+alias cat="bat"
+alias k="kubectl"
